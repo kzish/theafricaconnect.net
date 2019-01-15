@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+
+<head>
+
+    @*jq*@
+    <script src="~/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="~/assets/js/check_browser.js"></script>
+
+    @*remove ie support*@
+    <script>
+        if (ie()) {
+            window.location = "/Home/UpdateBrowser";
+        }
+        else {
+            //console.log("ok");
+        }
+    </script>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>@ViewBag.title</title>
+
+
+    @*modernizer*@
+    <script src="~/assets/js/modernizr.custom.28468.js"></script>
+    @*boottrap*@
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+    @*backstretch*@
+    <script src="~/assets/js/jquery.backstretch.min.js"></script>
+
+    @*fade in*@
+
+    <link href="~/assets/css/fadein.css" rel="stylesheet" />
+
+    @*mystyle*@
+    <link href="~/assets/css/mystyle.css" rel="stylesheet" />
+
+    @*socila media*@
+    <link href="~/assets/css/social_media.css" rel="stylesheet" />
+
+    @*icon*@
+    <link href="~/assets/img/a_logo.png" rel="icon" />
+
+    @*validate*@
+    <script src="~/assets/libs/jquery_validator/jquery.validate.js"></script>
+
+    @*backstretch*@
+    <script src="~/assets/js/jquery.backstretch.min.js"></script>
+
+    <style>
+        .borderless td, .borderless th {
+            border: none;
+        }
+    </style>
+
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            z-index: 999999999999999999 !important;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1;
+            color: #fff;
+            width: 300px !important;
+            font-weight: 100 !important;
+            z-index: 999999999999999999 !important;
+            text-align: left !important;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            z-index: 999999999999999999 !important;
+        }
+
+        .mhr {
+            background: #fff !important;
+            margin: 40px !important;
+        }
+
+        .tour_guide_image_name {
+            color: #fff !important;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="javascript:void(0);">
+                <img src="~/assets/img/a_logo.png" style="height:50px;width:50px;" /> Africaconnect Travel & Tours
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item @(ViewBag.title=="Home"?"active":"")">
+                        <a class="nav-link" href="/Home/Home">Home</a>
+                    </li>
+                    <li class="nav-item @(ViewBag.title=="Virtual Tours"?"active":"")">
+                        <a class="nav-link" href="/Home/VirtualTours">Virtual Tours</a>
+                    </li>
+
+                    <li class="nav-item @(ViewBag.title=="Tourist Attractions"?"active":"")">
+                        <a class="nav-link" href="/Home/TouristAttractions">Tourist Attractions</a>
+                    </li>
+
+                    @* <li class="nav-item @(ViewBag.title=="Vehicles"?"active":"")">
+                            <a class="nav-link" href="/Home/Vehicles">Vehicles</a>
+                        </li>
+
+                        <li class="nav-item @(ViewBag.title=="Accomodation"?"active":"")">
+                            <a class="nav-link" href="/Home/Accomodation">Accomodation</a>
+                        </li>
+                    *@
+                    <li class="nav-item @(ViewBag.title=="Services"?"active":"")" style="z-index:1!important;">
+                        <a class="nav-link" href="javascript:void(0);">
+                            <div class="dropdown">
+                                <span>Services</span>
+                                <div class="dropdown-content">
+                                    <ul style="list-style:none;">
+                                        <li>
+                                            <b onclick="nav('ServicesPreAndPostTourAccomodation')">Pre & Post Tour Accomodation</b>
+                                        </li>
+                                        <li>
+                                            <b onclick="nav('ServicesAirportTransfers')">Airport Transfers</b>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item @(ViewBag.title=="Gallery"?"active":"")">
+                        <a class="nav-link" href="/Home/Gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item @(ViewBag.title=="Contact"?"active":"")">
+                        <a class="nav-link" href="/Home/Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="mpage" style="margin:0px!important;padding:0px!important;">
+        @RenderBody()
+
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+
+    <footer>
+        <div class="row" style="padding-top:50px!important;margin:0px!important;">
+            <div class="col-md-6">
+                <div id="social">
+                    <a class="facebookBtn smGlobalBtn" href="https://www.facebook.com/AfricaConnectlive/"></a>
+                    <a class="twitterBtn smGlobalBtn" href="https://twitter.com/AfricaConnect2"></a>
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+                <h2>CONTACT US</h2>
+                <table style="width:100%!important;" class="table borderless">
+                    <tr>
+                        <td>
+                            <img src="~/assets/img/envelope.png" />
+                        </td>
+                        <td>
+                            africaconnect00@gmail.com | africaconnectreservations@gmail.com
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> <img src="~/assets/img/telephone.png" /></td>
+                        <td>
+                            +263 719629407 | +263 771629 407
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> <img src="~/assets/img/whatsapp.png" /></td>
+                        <td>
+                            +264 812444 723
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> <img src="~/assets/img/skype.png" /></td>
+                        <td>Africaconnect Travel Reservations</td>
+                    </tr>
+
+                    <tr>
+                        <td> <img src="~/assets/img/address.png" /></td>
+                        <td>
+                            5561 Mkosana T/Ship<br />
+                            Victoria Falls<br />
+                            Zimbabwe<br />
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+
+        <hr class="mhr" />
+        <div class="foot" style="background:#222222!important; width:100%!important;height:100vh!important;padding:40px!important;">
+            <h1>About</h1>
+            <div style="text-align:justify;">
+                Africaconnect is a tour and travelling company founded by Richard Mashinge in 2016. Our offices are in Victoria Fall. I have 15 years of experience in Overlanding guiding in Eastern and Southern African Countries. As the founder of the company , I am leading a team of most experienced guides in the industry. Most of our guides are born and raised in Africa and they know Africa like the back of their palm. Currently we are running tour in Southern Africa though we are flexible enough to arrange tailor made tours in East Africa
+                Travelling in Africa is unpredictable. Expect the unexpected. Our tours and transfers are in two, some luxurious and some are not. If you approach your trip with a spirit of adventure and a positive attitude, you and your fellow passengers will get the most out of the journey.
+            </div>
+
+            <h1>Our vehicles</h1>
+            <div style="text-align:justify;">
+                Our vehicles are all serviced and maintained at workshops in the countries we visit. All of our vehicles are not air conditioned and but well maintained to give the best of a safe and enjoyable ride. Our drivers are trained to attend to any minor mechanical problems that may be experienced along the way and as such it is rare for a trip to be delayed due to mechanical breakdown.
+            </div>
+
+            <h1>Trip Length</h1>
+            <div style="text-align:justify;">
+                Not everyone has the luxury of more than 3 weeks of holiday in one go, so we have designed our itineraries to interlink so you can enjoy as much, or as little as you would like. We offer tours ranging from 2 to 58days in duration of camping or accommodated tours. Whether you are a young professional looking for a 10  day break, a student looking to combine a safari with and exchange or volunteer program, a family wanting to experience an African adventure together or a diehard expedition traveller , look no further we have something for all.
+            </div>
+
+            <h1>Crew</h1>
+            <div style="text-align:justify;">
+                Our camping and accommodated trips have 2 crew members, a driver and the Trip Leader who is also the cook. Your Trip leader is generally African and has a wealth of experience which they are more than happy to share. They have also travelled through Africa, either independently or as a passenger and have travelled for a number of years which makes them able to run successfully throughout the route we travel. All crew are guides. Our crew are not expects in all aspects of the culture, history and wildlife of each area. They are employed to ensure a smooth running of your trip. That said, all of our crew have a passion for Africa and have acquired much knowledge of each area, which they will happily share. Due to circumstances beyond our control, like impassable roads or group safety, it may be necessary to make alterations to the planned itinerary. If this is necessary the Trip Leader will discuss the problem with the group and alter the itinerary accordingly. The trip leader will obviously consider the wishes of the group, but there may be occasions where they have to make an unpopular decision. In all matters relating to the trip’s running, the Trip leader’s decision will be final.
+            </div>
+
+        </div>
+
+
+        <div class="foot" style="color:#fff!important;">
+            <div class="row">
+                <div class="col-md-12">
+                    <center>
+                        <h1>Meet the team</h1>
+                    </center>
+                </div>
+            </div>
+            <br />
+            <div class="row" style="color:#fff;background:#222222!important;">
+
+                <div class="col-md-2  mx-auto fade-in zero description">
+                    <center>
+                        <img src="~/assets/img/face1.jpg" class="tour_guide_image" />
+                        <br />
+                        <p class="tour_guide_image_name"> Richard Mashinge<br />Founder and Managing Director</p>
+                    </center>
+                </div>
+
+                <div class="col-md-2  mx-auto fade-in zero description">
+                    <center>
+                        <img src="~/assets/img/face1.jpg" class="tour_guide_image" />
+                        <br />
+                        <p class="tour_guide_image_name">Fiona Barnes<br />Marketing director</p>
+                    </center>
+                </div>
+
+                <div class="col-md-2 mx-auto fade-in zero description">
+                    <center>
+                        <img src="~/assets/img/face1.jpg" class="tour_guide_image" />
+                        <br />
+                        <p class="tour_guide_image_name"> Victor Moyo<br />Guide</p>
+                    </center>
+                </div>
+
+                <div class="col-md-2 mx-auto fade-in zero description">
+                    <center>
+                        <img src="~/assets/img/face1.jpg" class="tour_guide_image" />
+                        <br />
+                        <p class="tour_guide_image_name">  Rimson Phiri<br />Guide</p>
+                    </center>
+                </div>
+
+                @* <div class="col-md-2  mx-auto fade-in zero description">
+                        <center>
+                            <img src="~/assets/img/face1.jpg" class="tour_guide_image" />
+                            <br />
+                            <p class="tour_guide_image_name">Paidamoyo Mashinge<br />Reservations</p>
+                        </center>
+                    </div>*@
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </footer>
+
+    <script>
+        function nav(url) {
+            window.location = url;
+        }
+    </script>
+</body>
+
+</html>
+

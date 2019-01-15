@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>@ViewBag.title</title>
+    <link href="~/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/jquery.pagepiling.css" rel="stylesheet" />
+    <link href="~/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/examples.css" rel="stylesheet" />
+    <script src="~/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="~/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/jquery.pagepiling.min.js"></script>
+
+    <script src="~/assets/js/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#pagepiling').pagepiling({
+               // direction: 'horizontal',
+                menu: '#menu',
+                anchors: ['start',
+                    'day1',
+                    'day3',
+                    'day4',
+                    'day5',
+                    'day6',
+                    'day7',
+                    'day9',
+                    'day10',
+                ],
+                sectionsColor: ['white',
+                    '#ee005a',
+                    '#2C3E50',
+                    '#39C',
+                    '#800080',
+                    '#0000FF',
+                    '#00FFFF',
+                    '#00FF00',
+                    '#FFFF00',
+                    '#FF0000',
+                    '#00FFFF',
+                    '#000080',
+                    '#ee005a',
+                    '#2C3E50',
+                    '#39C',
+                    '#800080',
+                    '#0000FF',
+                    '#00FFFF',
+                    '#00FF00',
+                    '#FFFF00',
+                    '#FF0000',
+                    '#00FFFF',
+                    '#000080',
+                    '#FF00FF'],
+                navigation: {
+                    'position': 'right',
+                    'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
+                },
+                afterRender: function () {
+                    $('#pp-nav').addClass('custom');
+                },
+                afterLoad: function (anchorLink, index) {
+                    if (index > 1) {
+                        $('#pp-nav').removeClass('custom');
+                    } else {
+                        $('#pp-nav').addClass('custom');
+                    }
+                }
+            });
+
+            $("#start").backstretch("/assets/VirtualTourLibs/ChokeAndOkavanmgoDelta/okavango.png");
+            $("#day1").backstretch("/assets/VirtualTourLibs/ChokeAndOkavanmgoDelta/rafting.gif");
+            $("#day3").backstretch("/assets/VirtualTourLibs/ChokeAndOkavanmgoDelta/kasane.png");
+            $("#day4").backstretch("/assets/VirtualTourLibs/ChokeAndOkavanmgoDelta/nata.jpg");
+            $("#day6").backstretch("/assets/VirtualTourLibs/ChokeAndOkavanmgoDelta/elephant.jpg");
+            $("#day7").backstretch("/assets/VirtualTourLibs/ChokeAndOkavanmgoDelta/okovango.jpg");
+            $("#day9").backstretch("/assets/VirtualTourLibs/ChokeAndOkavanmgoDelta/maun.png");
+           // $("#day10").backstretch("/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/chin.jpg");
+
+        });
+    </script>
+    <style>
+        #section1 img {
+            margin: 20px 0;
+            opacity: 0.7;
+        }
+        /* colors
+         * --------------------------------------- */
+        #colors2,
+        #colors3 {
+            position: absolute;
+            height: 163px;
+            width: 362px;
+            z-index: 1;
+            background-repeat: no-repeat;
+            left: 0;
+            margin: 0 auto;
+            right: 0;
+        }
+
+        #colors2 {
+            background-image: url(imgs/colors2.gif);
+            top: 0;
+        }
+
+        #colors3 {
+            background-image: url(imgs/colors3.gif);
+            bottom: 0;
+        }
+
+
+        /* Overwriting fullPage.js tooltip color
+        * --------------------------------------- */
+        #pp-nav.custom .pp-tooltip {
+            color: #AAA;
+        }
+
+        .bgdark {
+            background: rgba(0,0,0,.4);
+            padding: 10px !important;
+            font-size: 20px !important;
+            padding: 40px !important;
+            text-align: left !important;
+        }
+
+            .bgdark h2 {
+                font-size: 23px !important;
+            }
+    </style>
+
+</head>
+<body>
+    <ul id="menu">
+        <li data-menuanchor="start" class="active"><a href="#start">Start</a></li>
+        <li data-menuanchor="day1"><a href="#day1">Day 1 & 2</a></li>
+        <li data-menuanchor="day3"><a href="#day3">Day 3</a></li>
+        <li data-menuanchor="day4"><a href="#day4">Day 4</a></li>
+        <li data-menuanchor="day5"><a href="#day5">Day 5</a></li>
+        <li data-menuanchor="day6"><a href="#day6">Day 6</a></li>
+        <li data-menuanchor="day7"><a href="#day7">Day 7 & 8</a></li>
+        <li data-menuanchor="day9"><a href="#day9">Day 9</a></li>
+        <li data-menuanchor="day10"><a href="#day10">Day 10</a></li>
+        <li><a href="/Home/VirtualTours">Exit Tour</a></li>
+    </ul>
+
+
+    <div id="pagepiling">
+
+        <div class="section" id="start">
+            <h1 style="background:rgba(0,0,0,.4);padding:40px!important;">Victoria Falls, Chobe and Okavango delta experience</h1>
+            <p style="background:rgba(0,0,0,.4);padding:10px!important;">Scroll To Begin Tour</p>
+        </div>
+
+        <div class="section" id="day1">
+
+
+            <div class="bgdark">
+                <h1>Victoria Falls</h1>
+                Various activities are on offer. Those staying longer can choose from various activities and excursions, including white water rafting, canoeing and flying fox rides. For an incredible scenic helicopter flight, the only Africaconnect-endorsed operator. Your leader can help you arrange this.
+                <br />
+                <br />
+                <ul>
+                    <li>
+                        Optional activities:
+                        White-water rafting (full day),
+                        Helicopter flight (25 mins),
+                        Village & township tour,
+                        Helicopter flight (12 mins),
+                        White-water rafting (half day),
+                        Gorge swing,
+                        Flying fox
+
+
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="section" id="day3">
+            <div class="bgdark">
+                <h1>
+                    Kasane <br />(Chobe National Park)
+                </h1>
+                Hit the road for Chobe National Park (approximately an hour to an hour and a half). Botswana’s first National Park is perhaps best known for its high concentration of elephants, which can often be seen swimming in the Chobe River. The river also attracts wallowing hippos, a variety of bird life, crocodiles sunning themselves by the water’s edge, cheetahs and lions which come down to drink. Enjoy your sunset cruise on the Chobe River, a very relaxing way to spend the afternoon. Your campsite tonight has wifi access and optional upgrades. It’s also close to a supermarket so you can stock up on supplies while we are here.
+                <br />
+                <br />
+                <ul>
+                    <li>
+                        Accommodation:
+                        Accommodated (with facilities) (1 night)
+                    </li>
+                    <li>
+                        Included activities:
+                        Chobe National Park - River Cruise
+
+                    </li>
+                    <li>
+                        Optional Activities:
+                        Game Drive
+                    </li>
+                    <li>
+                        Meals included:
+                        Breakfast,
+                        Lunch,
+                        Dinner
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="section" id="day4">
+
+            <div class="bgdark">
+                <h1>Nata</h1>
+                Get up early to hit the road for Nata (approximately 4-5 hours). This small town is suited just near the stunning Makgadikgadi Salt Pans, Which are some of the largest salt flats on earth, covering 12000 square kilometres. This afternoon you will have the opportunity to explore the pans in an open vehicle. The pans are naturally dry and salty for a large part of this year.
+                <br />During this time, the arid landscape has an eerie feel to it as heat mirages disorientate the senses. At other times they take on a layer of grass, and as soon as the rains hit they become a refuge for the migratory birds and animals. Your campsite tonight is situated on the edge of the pans. It has a restaurant, swimming pool, gift shop, ATM and bar/lounge area. Upgrades are also offered
+                <br />
+                <br />
+                <br />
+                <ul>
+                    <li>
+                        Accommodation:
+                        Accommodated (with facilities) (1 night)
+                    </li>
+                    <li>
+                        Included activities:
+                        Nata - Makgadikgadi Salt Pans
+
+                    </li>
+                    <li>
+                        Meals included:
+                        Breakfast,
+                        Lunch,
+                        Dinner
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="section" id="day5">
+
+            <div class="bgdark">
+                <h1>Maun</h1>
+                Jump aboard the vehicle and head to Maun (approximately 4-5 hours). Here there will be an opportunity to stock up on any supplies you might need for the journey ahead. Maun is the gateway to one of the world’s renowned and complex ecosystems, the Okavango Delta. This place is unlike anything in the world, a 16000 square kilometre maze of wetlands made up of meandering waterways, green islands, lush plains and prolific wildlife. You might see hippos, crocodiles and elephants and big cats. But it’s not the animals that are the main attraction; it’s the incredibly diverse ecosystem and atmospheric waterscapes. Tonight you will stay on the outskates of Maun at a simple campsite with shared facilities, Wi-Fi and optional upgrades.
+
+                <br />
+                <br />
+                <br />
+                <ul>
+                    <li>
+                        Accommodation:
+                        Accommodated (with facilities) (1 night)
+                    </li>
+
+                    <li>
+                        Meals included:
+                        Breakfast,
+                        Dinner
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="section" id="day6">
+
+            <div class="bgdark">
+                <h1>Elephant Sands</h1>
+                Elephant Sands is a bush lodge & campsite in the north-eastern part of Botswana. There you enjoy viewing the elephants at the natural waterhole right in front of the lodge. Watch these impressive creatures whilst they drink at only a couple of meters away from you, a unique experience! There is plenty of other wildlife around as well on our unfenced 16000 ha private conservancy. The lack of fences allows all animals to roam freely. It is ideally located in the centre of Botswana’s highlights, such as: the Makgadikgadi pans, the Okavango delta and Chobe National Park. Victoria Falls and Hwange National Park are at the doorstep so to speak.
+
+                <br />
+                <br />
+                <br />
+                <ul>
+                    <li>
+                        Accommodation:
+                        Accommodated (with facilities) (1 night)
+                    </li>
+
+                    <li>
+                        Meals included:
+                        Breakfast,
+                        Lunch,
+                        Dinner
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="section" id="day7">
+
+            <div class="bgdark">
+                <h1>Okavango Delta</h1>
+                Traverse the waterways by mokoro, a traditional dugout canoe navigated by friendly local ‘poles’. With some luck you might spot off some of the delta’s unusual wildlife and exotic birdlife. Spend time exploring the maze of lagoons, lakes and streams on foot, led by experienced and knowledge guides. Tonight you will cam on a remote island in the heart of the wilderness. In this far out spot, facilities are nonexistent, so you will dig a bush toilet and go without a shower. It’s part of the Okavango experience. At night, fall asleep to the humming and buzzing of African wilderness
+
+                <br />
+                <br />
+                <br />
+                <ul>
+                    <li>
+                        Accommodation:
+                        Bush camp (no facilities)  (2 nights)
+                    </li>
+                    <li>
+                        Included activities: Okavango delta- Mokoro Safari
+                    </li>
+                    <li>
+                        Meals included:
+                        Breakfast,
+                        Lunch,
+                        Dinner
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="section" id="day9">
+
+            <div class="bgdark">
+                <h1>Maun</h1>
+                After taking down your camp, take the mokoro back to the polling station and then travel once again to Maun (approximately 2-3 hours). Today you will visit a rural village and interact with some locals. This will give you an insight into the daily life on the Okavango Delta and perhaps some background history on these awesome sprawling waterways that are the lifeblood of many. Tonight you will camp on the outskirts of Maun at a simple campsite which has shared facilities. Wi-Fi and optional upgrades are available
+                <br />
+                <br />
+                <br />
+                <ul>
+                    <li>
+                        Accommodation:
+                        Accommodated ( with facilities) (1 night)
+                    </li>
+                    <li>
+                        Included activities: Okavango Delta- Mokoro safari
+                    </li>
+                    <li>
+                        Optional activities: Okavango Delta- Plane Scenic Flight, Okavango Delta- Helicopter Scenic flight
+                    </li>
+                    <li>
+                        Meals included:
+                        Breakfast,
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+
+        <div class="section" id="day10">
+
+            <div class="bgdark">
+                <h1>Tour ends</h1>
+                Tour ends with transfer to the airport
+                <br />
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>@ViewBag.title</title>
+    <link href="~/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/jquery.pagepiling.css" rel="stylesheet" />
+    <link href="~/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/examples.css" rel="stylesheet" />
+    <script src="~/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="~/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/jquery.pagepiling.min.js"></script>
+
+    <script src="~/assets/js/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#pagepiling').pagepiling({
+                direction: 'horizontal',
+                menu: '#menu',
+                anchors: ['start',
+                    'day1',
+                    'day2',
+                    'day4'
+                ],
+                sectionsColor: ['white',
+                    '#ee005a',
+                    '#2C3E50',
+                    '#39C',
+                    '#800080',
+                    '#0000FF',
+                    '#00FFFF',
+                    '#00FF00',
+                    '#FFFF00',
+                    '#FF0000',
+                    '#00FFFF',
+                    '#000080',
+                    '#ee005a',
+                    '#2C3E50',
+                    '#39C',
+                    '#800080',
+                    '#0000FF',
+                    '#00FFFF',
+                    '#00FF00',
+                    '#FFFF00',
+                    '#FF0000',
+                    '#00FFFF',
+                    '#000080',
+                    '#FF00FF'],
+                navigation: {
+                    'position': 'right',
+                    'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
+                },
+                afterRender: function () {
+                    $('#pp-nav').addClass('custom');
+                },
+                afterLoad: function (anchorLink, index) {
+                    if (index > 1) {
+                        $('#pp-nav').removeClass('custom');
+                    } else {
+                        $('#pp-nav').addClass('custom');
+                    }
+                }
+            });
+
+            $("#start").backstretch("/assets/VirtualTourLibs/campingTour/camping.jpg");
+            $("#day1").backstretch("/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/vicfalls.gif");
+            $("#day2").backstretch("/assets/VirtualTourLibs/bestofzimbabwe/hwange.png");
+            $("#day3").backstretch("/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/hwange.png");
+            $("#day5").backstretch("/assets/VirtualTourLibs/bestofzimbabwe/matobohils.png");
+            $("#day6").backstretch("/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/lions.png");
+            $("#day8").backstretch("/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/gz.jpg");
+            $("#day9").backstretch("/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/harare.jpg");
+            $("#day10").backstretch("/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/chin.jpg");
+
+        });
+    </script>
+    <style>
+        #section1 img {
+            margin: 20px 0;
+            opacity: 0.7;
+        }
+        /* colors
+         * --------------------------------------- */
+        #colors2,
+        #colors3 {
+            position: absolute;
+            height: 163px;
+            width: 362px;
+            z-index: 1;
+            background-repeat: no-repeat;
+            left: 0;
+            margin: 0 auto;
+            right: 0;
+        }
+
+        #colors2 {
+            background-image: url(imgs/colors2.gif);
+            top: 0;
+        }
+
+        #colors3 {
+            background-image: url(imgs/colors3.gif);
+            bottom: 0;
+        }
+
+
+        /* Overwriting fullPage.js tooltip color
+        * --------------------------------------- */
+        #pp-nav.custom .pp-tooltip {
+            color: #AAA;
+        }
+
+        .bgdark {
+            background: rgba(0,0,0,.4);
+            padding: 10px !important;
+            font-size: 20px !important;
+            padding: 40px !important;
+            text-align: left !important;
+        }
+
+            .bgdark h2 {
+                font-size: 23px !important;
+            }
+    </style>
+
+</head>
+<body>
+    <ul id="menu">
+        <li data-menuanchor="start" class="active"><a href="#start">Start</a></li>
+        <li data-menuanchor="day1"><a href="#day1">Day 1</a></li>
+        <li data-menuanchor="day2"><a href="#day2">Day 2 & 3</a></li>
+        <li data-menuanchor="day4"><a href="#day4">Day 4</a></li>
+        <li><a href="/Home/VirtualTours">Exit Tour</a></li>
+    </ul>
+
+
+    <div id="pagepiling">
+
+        <div class="section" id="start">
+            <h1 style="background:rgba(0,0,0,.4);padding:40px!important;">Camping Tour</h1>
+            <p style="background:rgba(0,0,0,.4);padding:10px!important;">Scroll To Begin Tour</p>
+        </div>
+
+        <div class="section" id="day1">
+
+
+            <div class="bgdark">
+                <h1>Victoria Falls</h1>
+                In the town of Victoria Falls you will have to experience the sight and sound of the mighty falls. This thundering curtain of water is about a mile wide, falling 108 metres into a narrow gorge below. In the wet season, the spray created can rise up an incredible 400 metres and the falls become an impressive raging torrent. In the dry season the view of the falls is unobstructed by the spray and you can see little islets in the river bellow.
+                Your Campsite tonight has Wi-Fi, an ATM and optional upgrades.Your tour leader will take you to a local activity centre where a range of activities will be on offer.
+                <br />
+                <br />
+                <ul>
+                    <li>
+                        Accommodation: Camping ( with shared facilities) (1 night),
+                    </li>
+                  
+                    <li>
+                        Included activities: Victoria Falls – Victoria Falls entrance fee,
+                    </li>
+                   
+                    <li>
+                        Optional activities:
+                        Victoria Falls sunset cruise,
+                    </li>
+                    <li>
+                        Meals included: 
+                        Breakfast, Lunch
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="section" id="day2">
+            <div class="bgdark">
+                <h1>
+                    Hwange National Park
+                </h1>
+                Leave Victoria Falls behind and head to Hwange National Park (approximately 6 hours depending on traffic). You will explore this stunning wildlife Arena in an open 4 X 4 vehicle. Hwange National Park became the royal hunting grounds of the Ndebele warrior king Mzilikazi in the early 19th century. And was set aside as a national park in 1929. Today Hwange boasts of a tremendous selection of wildlife with over 100 species of mammals and nearly 400 bird species.
+                <br />
+                <br />
+                <ul>
+                    <li>
+                        Accommodation:
+                        Accommodated (with facilities) (2 nights)
+                    </li>
+                    <li>
+                        Included activities:
+                        Hwange National Park game drives
+
+                    </li>
+                   
+                    <li>
+                        Meals included:
+                        Breakfast,
+                        Lunch,
+                        Dinner
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="section" id="day4">
+
+            <div class="bgdark">
+                <h1>Victoria Falls</h1>
+                After breakfast we make a departure back to Victoria Falls to catch a flight.
+                <br />
+            </div>
+
+        </div>
+
+      
+
+
+    </div>
+</body>
+</html>

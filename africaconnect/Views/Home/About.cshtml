@@ -1,0 +1,193 @@
+﻿@{ Layout = "_Layout";}
+
+
+@*multi scroll page*@
+
+<link href="~/assets/libs/multiscroll/jquery.multiscroll.css" rel="stylesheet" />
+<link href="~/assets/libs/multiscroll/examples.css" rel="stylesheet" />
+<script src="~/assets/libs/multiscroll/jquery.easings.min.js"></script>
+<script src="~/assets/libs/multiscroll/jquery.multiscroll.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#myContainer').multiscroll({
+            sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#f5ca1f', '#1BBC9B'],
+            anchors: ['a1', 'a2', 'a3', 'a4', 'a5'],
+            menu: '#menu',
+            css3: true
+        });
+    });
+</script>
+
+
+<style>
+    h1 {
+        color: #fff;
+    }
+
+    .description p {
+        color: #fff;
+        font-size: 16px;
+    }
+
+    /* Fixed header and footer.
+	* --------------------------------------- */
+    #header, #footer {
+        position: fixed;
+        height: 50px;
+        display: block;
+        width: 100%;
+        background: #333;
+        z-index: 9;
+        text-align: center;
+        color: #f2f2f2;
+        padding: 20px 0 0 0;
+    }
+
+    #header {
+        top: 0px;
+    }
+
+    #footer {
+        bottom: 0px;
+    }
+
+</style>
+
+<div id="header">Header</div>
+<div id="footer">Footer</div>
+
+<div class="container">
+    <ul id="menu">
+        <li data-menuanchor="a1"><a href="#a1">About</a></li>
+        <li data-menuanchor="a2"><a href="#a2">Vehicles</a></li>
+        <li data-menuanchor="a3"><a href="#a3">Trip Length</a></li>
+        <li data-menuanchor="a4"><a href="#a4">Our Crew</a></li>
+        <li data-menuanchor="a5"><a href="#a5">Meet the Crew</a></li>
+    </ul>
+</div>
+
+
+
+<div id="myContainer">
+
+    @*lefts*@
+    <div class="ms-left">
+        <div class="ms-section" id="left1">
+            <h1>About Africaconect<br />Travel & tours</h1>
+        </div>
+
+        <div class="ms-section" id="left2">
+            <h1>Our vehicles</h1>
+        </div>
+
+        <div class="ms-section" id="left3">
+            <h1>Trip Length</h1>
+        </div>
+
+        <div class="ms-section" id="left4">
+            <h1>Our Crew</h1>
+        </div>
+
+        <div class="ms-section" id="left5">
+            <h1>Meet the<br /> Crew</h1>
+        </div>
+    </div>
+
+
+
+
+    @*rights*@
+    <div class="ms-right">
+        <div class="ms-section" id="right1">
+            <div class="row">
+                <div class="col-md-12 fade-in zero description">
+                    <p>Africaconnect is a tour and travelling company founded by Richard Mashinge in 2016. Our offices are in Victoria Fall. I have 15 years of experience in Overlanding guiding in Eastern and Southern African Countries. As the founder of the company , I am leading a team of most experienced guides in the industry. Most of our guides are born and raised in Africa and they know Africa like the back of their palm. Currently we are running tour in Southern Africa though we are flexible enough to arrange tailor made tours in East Africa</p>
+                    <p>Travelling in Africa is unpredictable. Expect the unexpected. Our tours and transfers are in two, some luxurious and some are not. If you approach your trip with a spirit of adventure and a positive attitude, you and your fellow passengers will get the most out of the journey.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="ms-section" id="right2">
+            <div class="row">
+                <div class="col-md-12 fade-in zero description">
+                    <p>Our vehicles are all serviced and maintained at workshops in the countries we visit. All of our vehicles are not air conditioned and but well maintained to give the best of a safe and enjoyable ride. Our drivers are trained to attend to any minor mechanical problems that may be experienced along the way and as such it is rare for a trip to be delayed due to mechanical breakdown</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="ms-section" id="right3">
+            <div class="row">
+                <div class="col-md-12 fade-in zero description">
+                    Not everyone has the luxury of more than 3 weeks of holiday in one go, so we have designed our itineraries to interlink so you can enjoy as much, or as little as you would like. We offer tours ranging from 2 to 58days in duration of camping or accommodated tours. Whether you are a young professional looking for a 10  day break, a student looking to combine a safari with and exchange or volunteer program, a family wanting to experience an African adventure together or a diehard expedition traveller , look no further we have something for all
+                </div>
+            </div>
+        </div>
+
+        <div class="ms-section" id="right4">
+            <div class="row">
+                <div class="col-md-12 fade-in zero description">
+                    Our camping and accommodated trips have 2 crew members, a driver and the Trip Leader who is also the cook. Your Trip leader is generally African and has a wealth of experience which they are more than happy to share. They have also travelled through Africa, either independently or as a passenger and have travelled for a number of years which makes them able to run successfully throughout the route we travel. All crew are guides. Our crew are not expects in all aspects of the culture, history and wildlife of each area. They are employed to ensure a smooth running of your trip. That said, all of our crew have a passion for Africa and have acquired much knowledge of each area, which they will happily share. Due to circumstances beyond our control, like impassable roads or group safety, it may be necessary to make alterations to the planned itinerary. If this is necessary the Trip Leader will discuss the problem with the group and alter the itinerary accordingly. The trip leader will obviously consider the wishes of the group, but there may be occasions where they have to make an unpopular decision. In all matters relating to the trip’s running, the Trip leader’s decision will be final
+                </div>
+            </div>
+        </div>
+
+        <div class="ms-section" id="right5">
+            <div class="row">
+
+                <div class="col-md-4 fade-in zero description">
+                    <center>
+                        <img src="~/assets/img/face1.jpg" class="tour_guide_image" />
+                        <br />
+                        <p class="tour_guide_image_name"> Richard Mashinge<br />Founder and Managing Director</p>
+                    </center>
+                </div>
+
+                <div class="col-md-4 fade-in zero description">
+                    <center>
+                        <img src="~/assets/img/face1.jpg" class="tour_guide_image" />
+                        <br />
+                        <p class="tour_guide_image_name">Fiona Barnes<br />Marketing director</p>
+                    </center>
+                </div>
+
+                <div class="col-md-4 fade-in zero description">
+                    <center>
+                        <img src="~/assets/img/face1.jpg" class="tour_guide_image" />
+                        <br />
+                        <p class="tour_guide_image_name"> Victor Moyo<br />Guide</p>
+                    </center>
+                </div>
+
+
+                <div class="col-md-4 fade-in zero description">
+                    <center>
+                        <img src="~/assets/img/face1.jpg" class="tour_guide_image" />
+                        <br />
+                        <p class="tour_guide_image_name">  Rimson Phiri<br />Guide</p>
+                    </center>
+                </div>
+
+
+                <div class="col-md-4 fade-in zero description">
+                    <center>
+                        <img src="~/assets/img/face1.jpg" class="tour_guide_image" />
+                        <br />
+                        <p class="tour_guide_image_name">Paidamoyo Mashinge<br />Reservations</p>
+                    </center>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+<script>
+    $.backstretch("/assets/img/vicfalls.png.");
+</script>

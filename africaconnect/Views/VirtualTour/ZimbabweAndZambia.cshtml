@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>@ViewBag.title</title>
+    <link href="~/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/jquery.pagepiling.css" rel="stylesheet" />
+    <link href="~/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/examples.css" rel="stylesheet" />
+    <script src="~/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="~/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/jquery.pagepiling.min.js"></script>
+
+    <script src="~/assets/js/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#pagepiling').pagepiling({
+                direction: 'horizontal',
+                menu: '#menu',
+                anchors: ['start',
+                    'day1',
+                    'day2',
+                    'day3',
+                    'day4',
+                    'day7',
+                ],
+                sectionsColor: ['white',
+                    '#ee005a',
+                    '#2C3E50',
+                    '#39C',
+                    '#800080',
+                    '#0000FF',
+                    '#00FFFF',
+                    '#00FF00',
+                    '#FFFF00',
+                    '#FF0000',
+                    '#00FFFF',
+                    '#000080',
+                    '#ee005a',
+                    '#2C3E50',
+                    '#39C',
+                    '#800080',
+                    '#0000FF',
+                    '#00FFFF',
+                    '#00FF00',
+                    '#FFFF00',
+                    '#FF0000',
+                    '#00FFFF',
+                    '#000080',
+                    '#FF00FF'],
+                navigation: {
+                    'position': 'right',
+                    'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
+                },
+                afterRender: function () {
+                    $('#pp-nav').addClass('custom');
+                },
+                afterLoad: function (anchorLink, index) {
+                    if (index > 1) {
+                        $('#pp-nav').removeClass('custom');
+                    } else {
+                        $('#pp-nav').addClass('custom');
+                    }
+                }
+            });
+
+            $("#start").backstretch("/assets/VirtualTourLibs/ZimbabweAndZambia/zimzambia.png");
+            $("#day1").backstretch("/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/vicfalls.gif");
+            $("#day2").backstretch("/assets/VirtualTourLibs/ZimbabweAndZambia/livingstone2.jpg");
+            $("#day3").backstretch("/assets/VirtualTourLibs/ZimbabweAndZambia/livingstone.jpg");
+            $("#day5").backstretch("/assets/VirtualTourLibs/bestofzimbabwe/matobohils.png");
+            $("#day6").backstretch("/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/lions.png");
+            $("#day8").backstretch("/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/gz.jpg");
+            $("#day9").backstretch("/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/harare.jpg");
+            $("#day10").backstretch("/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/chin.jpg");
+
+        });
+    </script>
+    <style>
+        #section1 img {
+            margin: 20px 0;
+            opacity: 0.7;
+        }
+        /* colors
+         * --------------------------------------- */
+        #colors2,
+        #colors3 {
+            position: absolute;
+            height: 163px;
+            width: 362px;
+            z-index: 1;
+            background-repeat: no-repeat;
+            left: 0;
+            margin: 0 auto;
+            right: 0;
+        }
+
+        #colors2 {
+            background-image: url(imgs/colors2.gif);
+            top: 0;
+        }
+
+        #colors3 {
+            background-image: url(imgs/colors3.gif);
+            bottom: 0;
+        }
+
+
+        /* Overwriting fullPage.js tooltip color
+        * --------------------------------------- */
+        #pp-nav.custom .pp-tooltip {
+            color: #AAA;
+        }
+
+        .bgdark {
+            background: rgba(0,0,0,.4);
+            padding: 10px !important;
+            font-size: 20px !important;
+            padding: 40px !important;
+            text-align: left !important;
+        }
+
+            .bgdark h2 {
+                font-size: 23px !important;
+            }
+    </style>
+
+</head>
+<body>
+    <ul id="menu">
+        <li data-menuanchor="start" class="active"><a href="#start">Start</a></li>
+        <li data-menuanchor="day1"><a href="#day1">Day 1</a></li>
+        <li data-menuanchor="day2"><a href="#day2">Day 2</a></li>
+        <li data-menuanchor="day3"><a href="#day3">Day 3</a></li>
+        <li data-menuanchor="day4"><a href="#day4">Day 4</a></li>
+        <li><a href="/Home/VirtualTours">Exit Tour</a></li>
+    </ul>
+
+    
+    <div id="pagepiling">
+
+        <div class="section" id="start">
+            <h1 style="background:rgba(0,0,0,.4);padding:40px!important;">Zimbabwe And Zambia Tour</h1>
+            <p style="background:rgba(0,0,0,.4);padding:10px!important;">Scroll To Begin Tour</p>
+        </div>
+
+        <div class="section" id="day1">
+
+
+            <div class="bgdark">
+                <h1>Victoria Falls</h1>
+                View & walk the length of a Natural Wonder of the World-Victoria Falls-the ‘smoke that thunders’,wander the markets & handicrafts.
+                <br />
+                <br />
+                <ul>
+                    <li>
+                        Optional activities:
+                        Whitewater rafting (full day), Helicopter flight (25 mins), Village & township tour, Helicopter flight (12 mins), Whitewater rafting (half day), Gorge swing, Flying fox
+                    </li>
+                    <li>
+                        Optional Activities:
+                        Victoria Falls sunset cruise
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="section" id="day2">
+            <div class="bgdark">
+                <h1>
+                    Victoria Falls To Livingstone
+                </h1>
+                Visit a village and lunch with the locals and cross border to Zambia in the afternoon. In Zambia we check out the Livingstone handicrafts & markets and later enjoy sunset overlooking the Zambezi River at the Waterfront lodge.
+                <br />
+                <br />
+
+            </div>
+        </div>
+
+        <div class="section" id="day3">
+            <div class="bgdark">
+                <h1>
+                    Livingstone To Victoria Falls
+                </h1>
+                Enjoy an early game park walk which includes morning tea;view the Falls from this different aspect;cross back to Victoria Falls;enjoy a sunset cruise on the beautiful Zambezi River.
+                <br />
+                <br />
+
+            </div>
+        </div>
+
+
+        <div class="section" id="day4">
+
+            <div class="bgdark">
+                <h1>Tour ends</h1>
+                Tour ends with transfer to the airport
+                <br />
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+</html>

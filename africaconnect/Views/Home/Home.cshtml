@@ -1,0 +1,441 @@
+﻿@{ Layout = "_Layout";}
+
+@*csslider*@
+<link href="~/assets/libs/csslider/css/demo.css." rel="stylesheet" />
+<link href="~/assets/libs/csslider/css/style2.css" rel="stylesheet" />
+
+@*chosen*@
+<script src="~/assets/libs/chosen/chosen.jquery.min.js"></script>
+<link href="~/assets/libs/chosen/chosen.min.css" rel="stylesheet" />
+
+@*cards*@
+<link href="~/assets/libs/cards/card.css" rel="stylesheet" />
+<script src="~/assets/libs/cards/card.js"></script>
+
+<style>
+    .res {
+        height: 57px !important;
+    }
+
+    .res_ {
+        background: #FFCC00;
+        padding: 40px;
+    }
+
+
+    .field {
+        position: relative;
+        font-family: Arial;
+        font-weight: bold;
+        display: inline-block;
+        width: 100% !important;
+    }
+
+    label {
+        position: absolute;
+        left: 5px !important;
+        top: 5px !important;
+        transition: all .2s linear;
+        color: #999;
+        font-size: 10px;
+        width: 100px !important;
+    }
+</style>
+
+<div class="container.">
+    <div id="da-slider" class="da-slider">
+        <div class="da-slide">
+            <h2>True African <br />experience</h2>
+            <p>
+                Looking for a holiday with a difference? Africaconect promises just that . . . with nothing between you and the magnificent flora and fauna of the bushveld but a sheet of canvas
+            </p>
+            <div class="da-img">
+                <img src="~/assets/img/el.jpg" />
+            </div>
+        </div>
+        <div class="da-slide">
+            <h2>Let us inspire you</h2>
+            <p>
+                If you dream of having an authentic African adventure an Africaconnect tour is one of the best ways to achieve it. We organise and plan everything for you, leaving you free to relax and really enjoy your African experience.
+            </p>
+            <div class="da-img">
+                <img src="~/assets/img/kariba_dam.jpg" />
+            </div>
+        </div>
+        <div class="da-slide">
+            <h2>Life changing <br />experiences</h2>
+            <p>
+                Experience Variety<br />
+                A different light<br />
+                A new point of view<br />
+                A signature of excellence<br />
+            </p>
+            <div class="da-img">
+                <img src="~/assets/img/lion.jpg" />
+            </div>
+        </div>
+        <div class="da-slide">
+            <h2>
+                Travel to live, <br />Live to travel
+            </h2>
+            <p>
+                A Destination for the New Millennium<br />
+                Awaken To A Different World<br />
+                Beautiful one day, perfect the next<br />
+            </p>
+            <div class="da-img">
+                <img src="~/assets/img/gonaz.jpg" />
+            </div>
+        </div>
+        <nav class="da-arrows">
+            <span class="da-arrows-prev"></span>
+            <span class="da-arrows-next"></span>
+        </nav>
+    </div>
+</div>
+
+<br />
+<br />
+<br />
+<div class="container">
+    @*
+        <div class="res_">
+
+            <div class="row">
+                <div class="col-md-8" style="padding:2px!important;">
+                    <div class="field">
+                        <select class="form-control res" name="activitys" id="activitys">
+                            <option></option>
+                        </select>
+                        <label>Select Activities</label>
+                    </div>
+                </div>
+                <div class="col-md-2" style="padding:2px!important;">
+                    <div class="field">
+                        <input type="number" min="1" class="form-control res" name="numguests" id="numguests" />
+                        <label>Guests</label>
+                    </div>
+                </div>
+
+                <div class="col-md-2" style="padding:2px!important;">
+                    <div class="field">
+                        <input type="number" min="1" class="form-control res" name="numchildren" id="numchildren" />
+                        <label>Children</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4" style="padding:2px;">
+                    <div class="field">
+                        <input type="text" name="datein" id="datein" class="form-control res" />
+                        <label>Date From</label>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding:2px!important;">
+                    <div class="field">
+                        <input type="text" name="dateout" id="dateout" class="form-control res" />
+                        <label>Date To</label>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding:2px!important;">
+                    <button type="submit" class="btn-block res btn-warning" style="background:#f4e113;color:#fff;font-weight:700;">Check Availability</button>
+                </div>
+            </div>
+        </div>*@
+</div>
+
+<div style="margin-top:30px!important;left:-100px!important;">
+
+    <div class="container" style="padding:0px!important;">
+
+        @*cards row 1*@
+        <div class="row" style="padding:0px!important;margin-left:-60px!important;">
+            <div class="col-md-3">
+                <div class="column">
+                    <div class="post-module">
+                        <div class="thumbnail">
+                            <img src="~/assets/img/camping_card.jpg" />
+                        </div>
+                        <!-- Post Content-->
+                        <div class="post-content">
+                            @*<div class="category">Book Now</div>*@
+                            <h1 class="title">Camping trips</h1>
+                            <h2 class="sub_title">$20</h2>/person
+                            <p class="description">
+                                On all of our camping trips we use two man dome tents with
+                                mosquito nets over the door and window areas, a sewn in
+                                ground sheet and a separate flysheet, which you share with
+                                fellow traveller. We also provide camping mattresses...
+                                <br />
+                                <a href="/Home/CampingTrips" class="btn btn-warning btn-sm">read more...</a>
+
+                            </p>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="column">
+                    <div class="post-module">
+                        <div class="thumbnail">
+                            <img src="~/assets/img/accomodation_card.png" />
+                        </div>
+                        <!-- Post Content-->
+                        <div class="post-content">
+                            @*<div class="category">Book Now</div>*@
+                            <h1 class="title">Accomodation</h1>
+                            <h2 class="sub_title">$12</h2>/per head
+                            <p class="description">
+                                Accommodation in Africa can vary from bush campsites in the middle of the African
+                                wilderness to fully luxurious hotels and lodges. Our travel and tour
+                                safaris of an adventurous nature, so whether you choose a camping safari or
+                                the accommodated option...
+                                <br />
+                                <a href="/Home/Accomodation" class="btn btn-warning btn-sm">read more...</a>
+
+                            </p>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3">
+                <div class="column">
+                    <div class="post-module">
+                        <div class="thumbnail">
+                            <img src="~/assets/img/traveling_card.jpg" />
+                        </div>
+                        <!-- Post Content-->
+                        <div class="post-content">
+                            @*<div class="category">Book Now</div>*@
+                            <h1 class="title">Life on the road</h1>
+                            <h2 class="sub_title">$5</h2>/per day
+                            <p class="description">
+                                Each vehicle carries everything needed to be completely self sufficient.
+                                It has a fully equipped kitchen including food, cutlery,
+                                pots and pans and a gas stove. All the day to day chores such as
+                                cleaning, washing up checking security and helping the...
+                                <br />
+                                <a href="/Home/LifeOnTheRoad" class="btn btn-warning btn-sm">read more...</a>
+                            </p>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-md-3">
+                <div class="column">
+                    <div class="post-module">
+                        <div class="thumbnail">
+                            <img src="~/assets/img/food_card.jpg" />
+                        </div>
+                        <!-- Post Content-->
+                        <div class="post-content">
+                            @*<div class="category">Book Now</div>*@
+                            <h1 class="title">Food</h1>
+                            <h2 class="sub_title">$2</h2>/per meal
+                            <p class="description">
+                                On our camping trips most meals are provided and prepared by the Safari Cook.
+                                Passengers are divided into groups and assist in the general camp duties on rota systems.
+                                One of these duties is assisting with the meal preparation...
+                                <br />
+                                <a href="/Home/Food" class="btn btn-warning btn-sm">read more...</a>
+
+                            </p>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        @*cards end row 1*@
+        <br />
+        <br />
+        <br />
+        @*cards row 2*@
+        <div class="row" style="padding:0px!important;margin-left:-60px!important;">
+            <div class="col-md-3">
+                <div class="column">
+                    <div class="post-module">
+                        <div class="thumbnail">
+                            <img src="~/assets/img/chalet_card.jpg" />
+                        </div>
+                        <!-- Post Content-->
+                        <div class="post-content">
+                            @*<div class="category">Book Now</div>*@
+                            <h1 class="title">Accommodated Tours</h1>
+                            <h2 class="sub_title">$20</h2>/per head
+                            <p class="description">
+                                On accommodated tours, you can expect 2-4 stars with twin /double
+                                accommodation and the majority of it is unsuited.
+                                In some places we also make use of permanent safari tents
+                                which are considered “accommodation”. The vehicle ...
+                                <br />
+                                <a href="/Home/Accommodated" class="btn btn-warning btn-sm">read more...</a>
+
+                            </p>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="column">
+                    <div class="post-module">
+                        <div class="thumbnail">
+                            <img src="~/assets/img/camping_card2.jpg" />
+                        </div>
+                        <!-- Post Content-->
+                        <div class="post-content">
+                            @*<div class="category">Book Now</div>*@
+                            <h1 class="title">Camping<br />&nbsp;</h1>
+                            <h2 class="sub_title">$12</h2>/per person
+                            <p class="description">
+                                Camping gives you the freedom to make your own home every evening.
+                                We provide you with heavy duty canvas dome tents which are standing heights...
+                                <br />
+                                <a href="/Home/Camping" class="btn btn-warning btn-sm">read more...</a>
+
+                            </p>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3">
+                <div class="column">
+                    <div class="post-module">
+                        <div class="thumbnail">
+                            <img src="~/assets/img/smallGroup_tours_card.jpg" />
+                        </div>
+                        <!-- Post Content-->
+                        <div class="post-content">
+                            @*<div class="category">Book Now</div>*@
+                            <h1 class="title">Small Group Tours</h1>
+                            <h2 class="sub_title">$12</h2>/per person
+                            <p class="description">
+                                Africaconect is proud to be one of the few adventure tour operators to
+                                offer a “business class” option to our already established and
+                                trusted variety of camping and accommodated tours...
+                                <br />
+                                <a href="/Home/SmallGroupTours" class="btn btn-warning btn-sm">read more...</a>
+
+                            </p>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="column">
+                    <div class="post-module">
+                        <div class="thumbnail">
+                            <img src="~/assets/img/day_tour_card.jpg" />
+                        </div>
+                        <!-- Post Content-->
+                        <div class="post-content">
+                            @*<div class="category">Book Now</div>*@
+                            <h1 class="title">Day Tours<br />&nbsp;</h1>
+                            <h2 class="sub_title">$12</h2>/per person
+                            <p class="description">
+
+                                Africaconect also offers a carefully selected list of day tours
+                                in and around Botswana, Zambia, Namibia and Zimbabwe...
+                                <br />
+                                <a href="/Home/DayTours" class="btn btn-warning btn-sm">read more...</a>
+
+                            </p>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        @*end cards row 2*@
+
+
+
+
+    </div>
+</div>
+
+
+<br />
+<br />
+<br />
+
+<div class="container">
+    <div class="res_">
+        <center>
+            <h2 style="color:#fff;font-size:33px!important;">Subscribe & Recieve Promotions</h2>
+            <small style="font-size:19px!important;">Sign up and we'll send the best deals to you</small>
+            <br />
+        </center>
+        <div class="row">
+            <form id="fid" action="/Home/SubscribeEmail" method="post" style="color:red;width:100%!important;">
+                <div class="input-group mb-3 input-group-lg">
+                    <input type="email" class="form-control " name="email" id="email" placeholder="" required>
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-block btn-warning " style="background:#f4e113;color:#fff;">Subscribe</button>
+                    </div>
+                    <label style="color:black!important;">email</label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="~/assets/libs/csslider/jquery.cslider.js"></script>
+<script type="text/javascript">
+    $(function () {
+
+        $('#da-slider').cslider({
+            autoplay: true,
+            bgincrement: 450
+        });
+
+    });
+
+    $(".post-module").hover(
+        function () {
+            $(this).addClass('hover', 1000);
+        },
+        function () {
+            $(this).removeClass('hover');
+        }
+    );
+
+
+    //$("#fid").validate();
+    $("#fid").on("submit", function () { 
+        var valid = $("#fid").valid();
+        if (valid) {
+            $.busyLoadFull("show");
+        }
+    });
+</script>

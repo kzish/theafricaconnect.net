@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>@ViewBag.title</title>
+    <link href="~/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/jquery.pagepiling.css" rel="stylesheet" />
+    <link href="~/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/examples.css" rel="stylesheet" />
+    <script src="~/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="~/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/jquery.pagepiling.min.js"></script>
+
+    <script src="~/assets/js/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#pagepiling').pagepiling({
+                //direction: 'horizontal',
+                menu: '#menu',
+                anchors: ['start',
+                    'day1',
+                    'day3',
+                    'day5',
+                    'day7',
+                ],
+                sectionsColor: ['white',
+                    '#ee005a',
+                    '#2C3E50',
+                    '#39C',
+                    '#800080',
+                    '#0000FF',
+                    '#00FFFF',
+                    '#00FF00',
+                    '#FFFF00',
+                    '#FF0000',
+                    '#00FFFF',
+                    '#000080',
+                    '#ee005a',
+                    '#2C3E50',
+                    '#39C',
+                    '#800080',
+                    '#0000FF',
+                    '#00FFFF',
+                    '#00FF00',
+                    '#FFFF00',
+                    '#FF0000',
+                    '#00FFFF',
+                    '#000080',
+                    '#FF00FF'],
+                navigation: {
+                    'position': 'right',
+                    'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Pgae 4']
+                },
+                afterRender: function () {
+                    $('#pp-nav').addClass('custom');
+                },
+                afterLoad: function (anchorLink, index) {
+                    if (index > 1) {
+                        $('#pp-nav').removeClass('custom');
+                    } else {
+                        $('#pp-nav').addClass('custom');
+                    }
+                }
+            });
+
+            $("#start").backstretch("/assets/VirtualTourLibs/BestOfZimbabwe/bestofzimbabwe.jpg");
+            $("#day1").backstretch("/assets/VirtualTourLibs/BestOfZimbabwe/gif_3.png");
+            $("#day3").backstretch("/assets/VirtualTourLibs/bestofzimbabwe/hwange.png");
+            $("#day5").backstretch("/assets/VirtualTourLibs/bestofzimbabwe/matobohils.png");
+            $("#day6").backstretch("/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/lions.png");
+            $("#day8").backstretch("/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/gz.jpg");
+            $("#day9").backstretch("/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/harare.jpg");
+            $("#day10").backstretch("/assets/VirtualTourLibs/VictorialFallsToVictoriaFalls/chin.jpg");
+
+        });
+    </script>
+    <style>
+        #section1 img {
+            margin: 20px 0;
+            opacity: 0.7;
+        }
+        /* colors
+         * --------------------------------------- */
+        #colors2,
+        #colors3 {
+            position: absolute;
+            height: 163px;
+            width: 362px;
+            z-index: 1;
+            background-repeat: no-repeat;
+            left: 0;
+            margin: 0 auto;
+            right: 0;
+        }
+
+        #colors2 {
+            background-image: url(imgs/colors2.gif);
+            top: 0;
+        }
+
+        #colors3 {
+            background-image: url(imgs/colors3.gif);
+            bottom: 0;
+        }
+
+
+        /* Overwriting fullPage.js tooltip color
+        * --------------------------------------- */
+        #pp-nav.custom .pp-tooltip {
+            color: #AAA;
+        }
+
+        .bgdark {
+            background: rgba(0,0,0,.4);
+            padding: 10px !important;
+            font-size: 20px !important;
+            padding: 40px !important;
+            text-align: left !important;
+        }
+
+            .bgdark h2 {
+                font-size: 23px !important;
+            }
+    </style>
+
+</head>
+<body>
+    <ul id="menu">
+        <li data-menuanchor="start" class="active"><a href="#start">Start</a></li>
+        <li data-menuanchor="day1"><a href="#day1">Day 1 & 2</a></li>
+        <li data-menuanchor="day3"><a href="#day3">Day 3 & 4</a></li>
+        <li data-menuanchor="day5"><a href="#day5">Day 5 & 6</a></li>
+        <li data-menuanchor="day7"><a href="#day7">Day 7</a></li>
+        <li><a href="/Home/VirtualTours">Exit Tour</a></li>
+    </ul>
+
+
+    <div id="pagepiling">
+
+        <div class="section" id="start">
+            <h1 style="background:rgba(0,0,0,.4);padding:40px!important;">Best of Zimbabwe</h1>
+            <p style="background:rgba(0,0,0,.4);padding:10px!important;">Scroll To Begin Tour</p>
+        </div>
+
+        <div class="section" id="day1">
+
+
+            <div class="bgdark">
+                <h1>Victoria Falls</h1>
+                On the first day of the trip, you get to experience a super charged, fun packed variety activities on offer in the town of  Victoria Falls
+
+                <br />
+                <br />
+                <ul>
+                    <li>
+                        Optional activities:
+                        Whitewater rafting (full day), Helicopter flight (25 mins), Village & township tour, Helicopter flight (12 mins), Whitewater rafting (half day), Gorge swing, Flying fox
+                    </li>
+                    <li>
+                        Optional Activities:
+                        Victoria Falls sunset cruise
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="section" id="day3">
+            <div class="bgdark">
+                <h1>
+                    Hwange National Park
+                </h1>
+                Leave Victoria Falls behind and head to Hwange National Park (approximately 6 hours depending on traffic). You will explore this stunning wildlife Arena in an open 4 X 4 vehicle. Hwange National Park became the royal hunting grounds of the Ndebele warrior king Mzilikazi in the early 19th century. And was set aside as a national park in 1929. Today Hwange boasts of a tremendous selection of wildlife with over 100 species of mammals and nearly 400 bird species. The elephants of Hwange are world famous; here you will find one of the largest populations in Africa. At tonight’s camp there will is Wi-Fi as well as optional accommodation upgrades (subject to availability).
+                <br />
+                <br />
+                <ul>
+                    <li>
+                        Accommodation:
+                        Accommodated (with facilities) (2 nights)
+                    </li>
+                    <li>
+                        Included activities:
+                        Hwange National Park game drives
+
+                    </li>
+                    <li>
+                        Optional Activities:
+                        Victoria Falls sunset cruise
+                    </li>
+                    <li>
+                        Meals included:
+                        Breakfast,
+                        Lunch,
+                        Dinner
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="section" id="day5">
+
+            <div class="bgdark">
+                <h1>Matobo Hills</h1>
+
+                Depart Bulawayo for Matobo Hills. This morning have a unique experience tracking rhinos on foot with the help of your guides. Here there will be the chance to spot other game (the park is home to klipspringers, leopards, warthogs and springhares among many others. You can also learn about the various local plant and tress, wild pear and paperback among them, while discovering bushman paintings and intriguingly rock formations. After a cold lunch venture to nearby African villages and meet some of the local community.
+                <br />
+                <ul>
+                    <li>
+                        Accommodation:
+                        Accommodated (with facilities) (2 nights)
+                    </li>
+                    <li>
+                        Included activities:
+                        Guided walking safari
+
+                    </li>
+                    <li>
+                        Meals included:
+                        Breakfast,
+                        Lunch,
+                        Dinner
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="section" id="day7">
+
+            <div class="bgdark">
+                <h1>Tour ends</h1>
+                Tour ends with transfer to the airport
+                <br />
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+</html>

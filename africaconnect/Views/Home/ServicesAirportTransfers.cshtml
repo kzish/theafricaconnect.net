@@ -1,0 +1,131 @@
+﻿@{ Layout = "_Layout";}
+
+<script src="~/assets/libs/match_height/jquery.matchHeight.js"></script>
+<script src="~/assets/libs/match_height/jquery.matchHeight-min.js."></script>
+
+<link href="~/assets/css/fadein.css" rel="stylesheet" />
+
+<style>
+    .item {
+        align-content: center;
+    }
+
+    .heading {
+        margin-bottom: 20px;
+    }
+
+    .img img {
+        align-content: center;
+        margin: auto;
+        height: 135px !important;
+        width: 135px !important;
+        padding: 20px !important;
+        background: rgba(0,0,0,0.1);
+        border-radius: 100px !important;
+    }
+
+    .stext {
+        color: #fff !important;
+    }
+
+    .text {
+        background: rgba(0,0,0,0.4);
+        padding: 20px !important;
+    }
+
+        .text h3 {
+            color: #fff !important;
+            font-size: 15px !important;
+        }
+</style>
+
+<div class="container" style="margin-top:40px!important;">
+
+    <div class="row">
+
+
+        @*  <div class="col-md-3 item box fade-in zero" data-mh="g1">
+                <center>
+                    <div class="text">
+                        <div class="img">
+                            <img src="~/assets/img/team.png" />
+                        </div>
+                        <div class="heading">
+                            <h3>Small group tours</h3>
+                        </div>
+                        <div class="stext">
+                            Africaconect is proud to be one of the few adventure tour operators to offer a “business class” option to our already established and trusted variety of camping and accommodated tours.
+                        </div>
+                    </div>
+                </center>
+            </div>
+
+            <div class="col-md-3 item box fade-in one" data-mh="g1">
+                <center>
+                    <div class="text">
+                        <div class="img">
+                            <img src="~/assets/img/day_icon.png" />
+                        </div>
+                        <div class="heading">
+                            <h3>Day tours</h3>
+                        </div>
+                        <div class="stext">
+                            Africaconect also offers a carefully selected list of day tours in and around Botswana, Zambia, Namibia and Zimbabwe
+                        </div>
+                    </div>
+                </center>
+            </div>
+        *@
+
+
+
+
+
+
+
+        <div class="col-md-12 item box fade-in zero" data-mh="g1">
+            <center>
+                <div class="text">
+                    <div class="img">
+                        <img src="~/assets/img/travel.png" />
+                    </div>
+                    <div class="heading">
+                        <h3>Airport Transfers</h3>
+                    </div>
+                    <div class="stext">
+                        We will also organise your airport transfers for you if you would like us to get you to and from your hotel, before or after your tour
+                    </div>
+                </div>
+            </center>
+        </div>
+
+
+
+
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<script>
+    var options = {
+        byRow: true,
+        property: 'height',
+        target: null,
+        remove: false
+    };
+
+    $('.text').matchHeight(options);
+    $.backstretch("/assets/img/vicfalls.jpg");
+</script>
