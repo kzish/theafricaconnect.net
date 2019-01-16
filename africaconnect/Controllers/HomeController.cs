@@ -236,8 +236,8 @@ namespace africaconnect.Controllers
             return View();
         }
 
-        [Route("404")]
-        public IActionResult _404()
+        [Route("error404")]
+        public IActionResult error404()
         {
             return View("~/Views/Home/error404.html");
         }
