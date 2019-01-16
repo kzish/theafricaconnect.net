@@ -2,8 +2,8 @@
 Description=My ASP.NET Core
 
 [Service]
-WorkingDirectory=/var/www/africaconnect/publish_folder
-ExecStart=/usr/bin/dotnet /var/www/africaconnect/publish_folder/africaconnect.dll
+WorkingDirectory=/var/www/ac
+ExecStart=/usr/bin/dotnet /var/www/ac/africaconnect.dll
 Restart=always
 # Restart service after 10 seconds if the dotnet service crashes:
 RestartSec=10
