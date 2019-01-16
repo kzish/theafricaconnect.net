@@ -35,10 +35,10 @@ namespace africaconnect
             services.AddSession();
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>(); // <= Add this for pagination
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.Configure<ForwardedHeadersOptions>(options =>
+           /* services.Configure<ForwardedHeadersOptions>(options =>
             {
                 options.KnownProxies.Add(IPAddress.Parse("54.93.36.66"));
-            });
+            });*/
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -69,7 +69,8 @@ namespace africaconnect
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("'version 1.0.0'");
+                 await context.Response.WriteAsync("<script>window.location='/Home/404'</script>");
+                //await context.Response.Redirect("");
             });
 
 
